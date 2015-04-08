@@ -10,8 +10,21 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var articlesTableView: UITableView!
+    
+    
+    var articlesList:[Article] = []
+    var paginationAdapter: PaginationAdapter?
     override func viewDidLoad() {
         super.viewDidLoad()
+        paginationAdapter = PaginationAdapter(api: UbysseyAPI(dataResolver: UbysseyAPIDataResolver()))
+        fetchArticles({(articles: [Article]) in
+            for article in articles {
+                self.articlesList.append(article)
+            }
+            
+            self.articlesTableView.reloadData()
+        })
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -22,12 +35,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:ArticleTableViewCell? = tableView.dequeueReusableCellWithIdentifier("ArticleTableViewCell") as? ArticleTableViewCell
-        
+        cell?.setData(articlesList[indexPath.row])
         return cell!
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.articlesList.count
+    }
+    
+    func fetchArticles(callback: [Article] -> Void) {
+        
+        paginationAdapter!.getNext(callback)
     }
 }
 
