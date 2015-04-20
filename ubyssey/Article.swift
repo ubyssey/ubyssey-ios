@@ -36,14 +36,14 @@ class Article {
     }
     
     func parseTime(timeString: String) -> NSDate? {
-        if (countElements(timeString) == 0) {
+        if (count(timeString) == 0) {
             return nil
         }
         
         let formatter = NSDateFormatter()
-        if (countElements(timeString) == 24) {
+        if (count(timeString) == 24) {
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
-        } else if (countElements(timeString) == 10){
+        } else if (count(timeString) == 10){
             formatter.dateFormat = "yyyy-MM-dd"
         }
         

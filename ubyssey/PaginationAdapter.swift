@@ -17,7 +17,6 @@ class PaginationAdapter {
     
     func getNext(callback: [Article] -> Void) {
         self.api.getFrontPage({(articlesData: JSON) -> Void in
-            println(articlesData)
             var articles: [Article] = []
             
             let articlesJson = articlesData["results"]

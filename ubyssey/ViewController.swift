@@ -9,9 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
     @IBOutlet weak var articlesTableView: UITableView!
-    
     
     var articlesList:[Article] = []
     var paginationAdapter: PaginationAdapter?
@@ -44,8 +42,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func fetchArticles(callback: [Article] -> Void) {
-        
         paginationAdapter!.getNext(callback)
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+            case "ArticleDetailSegue":
+                let indexPath = articlesTableView.indexPathForSelectedRow()
+                let viewController = segue.destinationViewController as! ArticleDetailViewController
+                viewController.article = articlesList[indexPath!.row]
+                break
+            default:
+                break
+            }
+        }
+    }
+
 }
 

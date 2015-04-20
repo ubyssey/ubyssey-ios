@@ -24,6 +24,8 @@
 		D0D8CDFD1AD2CB2F00AC29B4 /* ubysseyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CDFC1AD2CB2F00AC29B4 /* ubysseyTests.swift */; };
 		D0D8CE081AD2CB8900AC29B4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CE071AD2CB8900AC29B4 /* Article.swift */; };
 		D0D8CE0B1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CE0A1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift */; };
+		D0F014A81AD747CA00F86D10 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F014A71AD747CA00F86D10 /* Styles.swift */; };
+		D0F014AC1AD7489B00F86D10 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F014AB1AD7489B00F86D10 /* ArticleDetailViewController.swift */; };
 		E79A3F18633C47474731C5AD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A57389960E56CA5959BF4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		D0D8CDFC1AD2CB2F00AC29B4 /* ubysseyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ubysseyTests.swift; sourceTree = "<group>"; };
 		D0D8CE071AD2CB8900AC29B4 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		D0D8CE0A1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		D0F014A71AD747CA00F86D10 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		D0F014AB1AD7489B00F86D10 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,19 +162,20 @@
 		D0D8CDE01AD2CB2E00AC29B4 /* ubyssey */ = {
 			isa = PBXGroup;
 			children = (
+				D0F014AA1AD7487500F86D10 /* Controllers */,
 				D0B9C7531AD49BAC00A1FAB4 /* libs */,
 				D0BFFBF01AD4991100105986 /* Networking */,
 				D0BFFBE91AD4985D00105986 /* API */,
 				D0D8CE091AD2CBCA00AC29B4 /* Views */,
 				D0D8CE061AD2CB7D00AC29B4 /* Models */,
 				D0D8CDE31AD2CB2E00AC29B4 /* AppDelegate.swift */,
-				D0D8CDE81AD2CB2F00AC29B4 /* ViewController.swift */,
 				D0D8CDEA1AD2CB2F00AC29B4 /* Main.storyboard */,
 				D0D8CDED1AD2CB2F00AC29B4 /* Images.xcassets */,
 				D0D8CDEF1AD2CB2F00AC29B4 /* LaunchScreen.xib */,
 				D0D8CDE51AD2CB2E00AC29B4 /* ubyssey.xcdatamodeld */,
 				D0D8CDE11AD2CB2E00AC29B4 /* Supporting Files */,
 				D08A22791AD4BF8D00E576D0 /* ubyssey-Bridging-Header.h */,
+				D0F014A71AD747CA00F86D10 /* Styles.swift */,
 			);
 			path = ubyssey;
 			sourceTree = "<group>";
@@ -217,6 +222,15 @@
 				D08A227C1AD4CAB300E576D0 /* TrendingTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D0F014AA1AD7487500F86D10 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0D8CDE81AD2CB2F00AC29B4 /* ViewController.swift */,
+				D0F014AB1AD7489B00F86D10 /* ArticleDetailViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BFFBF21AD4994500105986 /* Transporter.swift in Sources */,
+				D0F014A81AD747CA00F86D10 /* Styles.swift in Sources */,
 				D0BFFBEF1AD4989F00105986 /* UbysseyAPIDataResolver.swift in Sources */,
 				D0BFFBED1AD4989200105986 /* APIProtocol.swift in Sources */,
 				D0B9C7561AD49BD200A1FAB4 /* SwiftyJSON.swift in Sources */,
@@ -383,6 +398,7 @@
 				D0D8CDE71AD2CB2E00AC29B4 /* ubyssey.xcdatamodeld in Sources */,
 				D0D8CDE41AD2CB2E00AC29B4 /* AppDelegate.swift in Sources */,
 				D08A227D1AD4CAB300E576D0 /* TrendingTableViewCell.swift in Sources */,
+				D0F014AC1AD7489B00F86D10 /* ArticleDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
