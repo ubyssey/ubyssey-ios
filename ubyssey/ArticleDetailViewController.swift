@@ -9,15 +9,25 @@
 import UIKit
 
 class ArticleDetailViewController: UIViewController {
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    
     var article: Article?
     override func viewDidLoad() {
-        //self.navigationController?.title = article?.longHeadline
-        println(article!.longHeadline)
-        println(article!.shortHeadline)
+        super.viewDidLoad()
+
         initializeView()
     }
     
     func initializeView() {
-        article?.content
+        if let article = article {
+            let items: [ArticleObject] = ArticleParser().consume(article).parseContent().getItems()
+            var currentPosition = CGFloat(0)
+            mainScrollView.contentSize = CGSize(width: self.view.frame.size.width, height: currentPosition)
+            
+            let drawer = ScrollViewDrawer(view: mainScrollView)
+            drawer.draw(items)
+            
+        }
     }
+    
 }

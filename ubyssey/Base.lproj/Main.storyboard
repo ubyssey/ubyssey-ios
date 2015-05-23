@@ -130,8 +130,22 @@ of his duties</string>
                     <view key="view" contentMode="scaleToFill" id="6MG-m8-I3m">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bG5-v5-PF6">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bG5-v5-PF6" firstAttribute="leading" secondItem="6MG-m8-I3m" secondAttribute="leading" id="JJs-t1-TTf"/>
+                            <constraint firstItem="bG5-v5-PF6" firstAttribute="top" secondItem="6MG-m8-I3m" secondAttribute="top" id="cKw-gJ-fKU"/>
+                            <constraint firstAttribute="bottom" secondItem="bG5-v5-PF6" secondAttribute="bottom" id="esc-f0-feg"/>
+                            <constraint firstAttribute="trailing" secondItem="bG5-v5-PF6" secondAttribute="trailing" id="nLs-BX-AE7"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainScrollView" destination="bG5-v5-PF6" id="d5o-bS-ZjD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLC-Td-ozs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

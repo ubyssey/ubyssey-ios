@@ -12,7 +12,7 @@ class Article {
     let longHeadline: String
     let shortHeadline: String
     let image: UbysseyImage
-    let content: String
+    let content: JSON
     let section: String
     //let publishedAt: NSDate?
     let importance: Int
@@ -28,7 +28,7 @@ class Article {
         self.longHeadline = articleData["long_headline"].stringValue
         self.shortHeadline = articleData["short_headline"].stringValue
         self.image = UbysseyImage(imageData: articleData["featured_image"])
-        self.content = articleData["content"].stringValue
+        self.content = articleData["content"]
         self.section = articleData["section"].stringValue
         //self.publishedAt = parseTime(articleData["published_at"].stringValue)!
         self.importance = articleData["importance"].intValue
@@ -49,5 +49,4 @@ class Article {
         
         return formatter.dateFromString(timeString)
     }
-
 }

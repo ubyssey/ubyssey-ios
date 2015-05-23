@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D04CECB11AF9906500C72F72 /* ScrollViewDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CECB01AF9906500C72F72 /* ScrollViewDrawable.swift */; };
+		D04CECB31AF992C800C72F72 /* ScrollViewDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04CECB21AF992C800C72F72 /* ScrollViewDrawer.swift */; };
+		D082E2FE1AE590E600DF13F0 /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D082E2FD1AE590E600DF13F0 /* ParallaxHeaderView.m */; };
+		D082E3011AE591D500DF13F0 /* ArticleParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082E3001AE591D500DF13F0 /* ArticleParser.swift */; };
+		D082E3031AE591F300DF13F0 /* ArticleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082E3021AE591F300DF13F0 /* ArticleImage.swift */; };
+		D082E3051AE5920400DF13F0 /* ArticleContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082E3041AE5920400DF13F0 /* ArticleContent.swift */; };
+		D082E3071AE5923C00DF13F0 /* ArticlePoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082E3061AE5923C00DF13F0 /* ArticlePoll.swift */; };
+		D082E3091AE5950200DF13F0 /* ArticleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082E3081AE5950200DF13F0 /* ArticleObject.swift */; };
+		D082E30D1AE597B500DF13F0 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D082E30C1AE597B500DF13F0 /* UIImage+ImageEffects.m */; };
+		D082E3111AE5A07700DF13F0 /* StringMeasurements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082E3101AE5A07700DF13F0 /* StringMeasurements.swift */; };
+		D082E3131AE5AA8500DF13F0 /* ArticleIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082E3121AE5AA8500DF13F0 /* ArticleIterator.swift */; };
 		D08A227D1AD4CAB300E576D0 /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08A227C1AD4CAB300E576D0 /* TrendingTableViewCell.swift */; };
 		D0B9C7561AD49BD200A1FAB4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B9C7551AD49BD200A1FAB4 /* SwiftyJSON.swift */; };
 		D0B9C7591AD49E1200A1FAB4 /* UbysseyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B9C7581AD49E1200A1FAB4 /* UbysseyImage.swift */; };
@@ -43,6 +54,19 @@
 		482A57389960E56CA5959BF4 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF3C33799F60FEE096CE05E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		96A5ED96705C4C7383AFAE12 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D04CECB01AF9906500C72F72 /* ScrollViewDrawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewDrawable.swift; sourceTree = "<group>"; };
+		D04CECB21AF992C800C72F72 /* ScrollViewDrawer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewDrawer.swift; sourceTree = "<group>"; };
+		D082E2FC1AE590E600DF13F0 /* ParallaxHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeaderView.h; sourceTree = "<group>"; };
+		D082E2FD1AE590E600DF13F0 /* ParallaxHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderView.m; sourceTree = "<group>"; };
+		D082E3001AE591D500DF13F0 /* ArticleParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleParser.swift; sourceTree = "<group>"; };
+		D082E3021AE591F300DF13F0 /* ArticleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleImage.swift; sourceTree = "<group>"; };
+		D082E3041AE5920400DF13F0 /* ArticleContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleContent.swift; sourceTree = "<group>"; };
+		D082E3061AE5923C00DF13F0 /* ArticlePoll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePoll.swift; sourceTree = "<group>"; };
+		D082E3081AE5950200DF13F0 /* ArticleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleObject.swift; sourceTree = "<group>"; };
+		D082E30B1AE597B500DF13F0 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		D082E30C1AE597B500DF13F0 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		D082E3101AE5A07700DF13F0 /* StringMeasurements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringMeasurements.swift; sourceTree = "<group>"; };
+		D082E3121AE5AA8500DF13F0 /* ArticleIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleIterator.swift; sourceTree = "<group>"; };
 		D08A22791AD4BF8D00E576D0 /* ubyssey-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ubyssey-Bridging-Header.h"; sourceTree = "<group>"; };
 		D08A227C1AD4CAB300E576D0 /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
 		D0B9C7551AD49BD200A1FAB4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -105,9 +129,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D082E2FB1AE590D900DF13F0 /* ParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				D082E2FC1AE590E600DF13F0 /* ParallaxHeaderView.h */,
+				D082E2FD1AE590E600DF13F0 /* ParallaxHeaderView.m */,
+			);
+			name = ParallaxHeader;
+			sourceTree = "<group>";
+		};
+		D082E2FF1AE591C800DF13F0 /* ArticleParser */ = {
+			isa = PBXGroup;
+			children = (
+				D082E3001AE591D500DF13F0 /* ArticleParser.swift */,
+				D082E3021AE591F300DF13F0 /* ArticleImage.swift */,
+				D082E3041AE5920400DF13F0 /* ArticleContent.swift */,
+				D082E3061AE5923C00DF13F0 /* ArticlePoll.swift */,
+				D082E3081AE5950200DF13F0 /* ArticleObject.swift */,
+				D082E3121AE5AA8500DF13F0 /* ArticleIterator.swift */,
+			);
+			name = ArticleParser;
+			sourceTree = "<group>";
+		};
+		D082E30A1AE597A600DF13F0 /* UIImage+ImageEffects */ = {
+			isa = PBXGroup;
+			children = (
+				D082E30B1AE597B500DF13F0 /* UIImage+ImageEffects.h */,
+				D082E30C1AE597B500DF13F0 /* UIImage+ImageEffects.m */,
+			);
+			name = "UIImage+ImageEffects";
+			sourceTree = "<group>";
+		};
+		D082E30F1AE5A06D00DF13F0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D082E3101AE5A07700DF13F0 /* StringMeasurements.swift */,
+				D04CECB21AF992C800C72F72 /* ScrollViewDrawer.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		D0B9C7531AD49BAC00A1FAB4 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				D082E30A1AE597A600DF13F0 /* UIImage+ImageEffects */,
+				D082E2FB1AE590D900DF13F0 /* ParallaxHeader */,
 				D0B9C7541AD49BB100A1FAB4 /* SwiftyJSON */,
 			);
 			name = libs;
@@ -162,6 +228,8 @@
 		D0D8CDE01AD2CB2E00AC29B4 /* ubyssey */ = {
 			isa = PBXGroup;
 			children = (
+				D082E30F1AE5A06D00DF13F0 /* Utils */,
+				D082E2FF1AE591C800DF13F0 /* ArticleParser */,
 				D0F014AA1AD7487500F86D10 /* Controllers */,
 				D0B9C7531AD49BAC00A1FAB4 /* libs */,
 				D0BFFBF01AD4991100105986 /* Networking */,
@@ -220,6 +288,7 @@
 				D0D8CE0A1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift */,
 				D0B9C75B1AD4A56200A1FAB4 /* PaginationAdapter.swift */,
 				D08A227C1AD4CAB300E576D0 /* TrendingTableViewCell.swift */,
+				D04CECB01AF9906500C72F72 /* ScrollViewDrawable.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -385,20 +454,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0BFFBF21AD4994500105986 /* Transporter.swift in Sources */,
+				D082E3011AE591D500DF13F0 /* ArticleParser.swift in Sources */,
 				D0F014A81AD747CA00F86D10 /* Styles.swift in Sources */,
 				D0BFFBEF1AD4989F00105986 /* UbysseyAPIDataResolver.swift in Sources */,
+				D082E30D1AE597B500DF13F0 /* UIImage+ImageEffects.m in Sources */,
 				D0BFFBED1AD4989200105986 /* APIProtocol.swift in Sources */,
 				D0B9C7561AD49BD200A1FAB4 /* SwiftyJSON.swift in Sources */,
 				D0D8CE0B1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift in Sources */,
 				D0D8CE081AD2CB8900AC29B4 /* Article.swift in Sources */,
 				D0BFFBEB1AD4988800105986 /* UbysseyAPI.swift in Sources */,
+				D082E3051AE5920400DF13F0 /* ArticleContent.swift in Sources */,
+				D082E2FE1AE590E600DF13F0 /* ParallaxHeaderView.m in Sources */,
+				D082E3071AE5923C00DF13F0 /* ArticlePoll.swift in Sources */,
 				D0B9C7591AD49E1200A1FAB4 /* UbysseyImage.swift in Sources */,
+				D04CECB11AF9906500C72F72 /* ScrollViewDrawable.swift in Sources */,
+				D082E3131AE5AA8500DF13F0 /* ArticleIterator.swift in Sources */,
+				D04CECB31AF992C800C72F72 /* ScrollViewDrawer.swift in Sources */,
 				D0B9C75C1AD4A56200A1FAB4 /* PaginationAdapter.swift in Sources */,
+				D082E3091AE5950200DF13F0 /* ArticleObject.swift in Sources */,
 				D0D8CDE91AD2CB2F00AC29B4 /* ViewController.swift in Sources */,
 				D0D8CDE71AD2CB2E00AC29B4 /* ubyssey.xcdatamodeld in Sources */,
+				D082E3031AE591F300DF13F0 /* ArticleImage.swift in Sources */,
 				D0D8CDE41AD2CB2E00AC29B4 /* AppDelegate.swift in Sources */,
 				D08A227D1AD4CAB300E576D0 /* TrendingTableViewCell.swift in Sources */,
 				D0F014AC1AD7489B00F86D10 /* ArticleDetailViewController.swift in Sources */,
+				D082E3111AE5A07700DF13F0 /* StringMeasurements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

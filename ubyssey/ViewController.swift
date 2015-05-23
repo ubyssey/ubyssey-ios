@@ -10,22 +10,37 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var articlesTableView: UITableView!
-    
+    var refreshControl:UIRefreshControl!
+
     var articlesList:[Article] = []
     var paginationAdapter: PaginationAdapter?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.articlesTableView.addSubview(refreshControl)
+
         paginationAdapter = PaginationAdapter(api: UbysseyAPI(dataResolver: UbysseyAPIDataResolver()))
+        // Do any additional setup after loading the view, typically from a nib.
+        populateData()
+    }
+
+    func refresh() {
+        populateData()
+    }
+    
+    func populateData() {
         fetchArticles({(articles: [Article]) in
+            self.articlesList.removeAll()
             for article in articles {
                 self.articlesList.append(article)
             }
             
             self.articlesTableView.reloadData()
+            self.refreshControl.endRefreshing()
         })
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,6 +49,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:ArticleTableViewCell? = tableView.dequeueReusableCellWithIdentifier("ArticleTableViewCell") as? ArticleTableViewCell
         cell?.setData(articlesList[indexPath.row])
+        
         return cell!
     }
     
@@ -53,6 +69,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 let indexPath = articlesTableView.indexPathForSelectedRow()
                 let viewController = segue.destinationViewController as! ArticleDetailViewController
                 viewController.article = articlesList[indexPath!.row]
+                articlesTableView.deselectRowAtIndexPath(indexPath!, animated: true)
+
                 break
             default:
                 break
