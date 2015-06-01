@@ -19,10 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         UITabBar.appearance().tintColor = Styles.mainColor()
-        var navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor.whiteColor()
+        var navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.tintColor = UIColor.whiteColor()
         
-        navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationBarAppearance.barStyle = UIBarStyle.Black
 
         return true
     }
