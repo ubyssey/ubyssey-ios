@@ -16,6 +16,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var paginationAdapter: PaginationAdapter?
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        var titleView = UIImageView(image: UIImage(named: "ubyssey_logo_small"))
+        titleView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.navigationItem.titleView = titleView
+
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         self.articlesTableView.addSubview(refreshControl)
