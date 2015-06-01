@@ -15,6 +15,10 @@ class ArticleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        var titleView = UIImageView(image: UIImage(named: "ubyssey_logo_small"))
+        titleView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.navigationItem.titleView = titleView
+
         initializeView()
     }
     
