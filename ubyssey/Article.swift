@@ -25,6 +25,7 @@ class Article {
     }
     
     init(articleData: JSON) {
+        println(articleData)
         self.longHeadline = articleData["long_headline"].stringValue
         self.shortHeadline = articleData["short_headline"].stringValue
         self.image = UbysseyImage(imageData: articleData["featured_image"])

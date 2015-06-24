@@ -9,15 +9,12 @@
 import Foundation
 
 class UbysseyImage {
-    let title: String
     let url: String
-    let thumb: String
     let caption: String
     let type: String
+    
     init(imageData: JSON) {
-        self.title = imageData["image"]["title"].stringValue
-        self.url = imageData["image"]["url"].stringValue
-        self.thumb = imageData["image"]["thumb"].stringValue
+        self.url = imageData["url"].stringValue
         self.caption = imageData["caption"].stringValue
         self.type = imageData["type"].stringValue
     }

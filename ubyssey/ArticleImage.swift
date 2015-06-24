@@ -17,7 +17,6 @@ class ArticleImage: ArticleObject {
         url = data["data"]["url"].stringValue
         width = CGFloat(data["data"]["width"].intValue)
         height = CGFloat(data["data"]["height"].intValue)
-        
         super.init(type: data["type"].stringValue)
     }
     
