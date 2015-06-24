@@ -83,5 +83,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
+    func setNavigationBarTransformProgress(progress: CGFloat) {
+        self.navigationController!.navigationBar.lt_setTranslationY(-44 * progress)
+        self.navigationController!.navigationBar.lt_setContentAlpha(1-progress)
+    }
+
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY > 0 {
+            if offsetY >= 44 {
+                self.setNavigationBarTransformProgress(1)
+            } else {
+                self.setNavigationBarTransformProgress(offsetY / 44)
+            }
+        } else {
+            self.setNavigationBarTransformProgress(0)
+            self.navigationController!.navigationBar.backIndicatorImage = UIImage()
+        }
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.lt_reset()
+    }
+
 }
 
