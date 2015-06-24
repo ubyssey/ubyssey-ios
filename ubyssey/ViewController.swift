@@ -66,7 +66,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         paginationAdapter!.getNext(callback)
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let identifier = segue.identifier {
             switch identifier {

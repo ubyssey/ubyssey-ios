@@ -26,6 +26,8 @@
 		D0BFFBED1AD4989200105986 /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFFBEC1AD4989200105986 /* APIProtocol.swift */; };
 		D0BFFBEF1AD4989F00105986 /* UbysseyAPIDataResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFFBEE1AD4989F00105986 /* UbysseyAPIDataResolver.swift */; };
 		D0BFFBF21AD4994500105986 /* Transporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BFFBF11AD4994500105986 /* Transporter.swift */; };
+		D0D1E3BC1B10911500890C59 /* ArticleTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1E3BB1B10911500890C59 /* ArticleTitle.swift */; };
+		D0D1E3BE1B13000600890C59 /* ArticleHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1E3BD1B13000600890C59 /* ArticleHeader.swift */; };
 		D0D8CDE41AD2CB2E00AC29B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CDE31AD2CB2E00AC29B4 /* AppDelegate.swift */; };
 		D0D8CDE71AD2CB2E00AC29B4 /* ubyssey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CDE51AD2CB2E00AC29B4 /* ubyssey.xcdatamodeld */; };
 		D0D8CDE91AD2CB2F00AC29B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CDE81AD2CB2F00AC29B4 /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 		D0D8CDFD1AD2CB2F00AC29B4 /* ubysseyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CDFC1AD2CB2F00AC29B4 /* ubysseyTests.swift */; };
 		D0D8CE081AD2CB8900AC29B4 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CE071AD2CB8900AC29B4 /* Article.swift */; };
 		D0D8CE0B1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D8CE0A1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift */; };
+		D0E552741B1B9BD000E2D4C6 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E552731B1B9BD000E2D4C6 /* SectionViewController.swift */; };
+		D0E552761B1B9FF900E2D4C6 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E552751B1B9FF900E2D4C6 /* TrendingViewController.swift */; };
 		D0F014A81AD747CA00F86D10 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F014A71AD747CA00F86D10 /* Styles.swift */; };
 		D0F014AC1AD7489B00F86D10 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F014AB1AD7489B00F86D10 /* ArticleDetailViewController.swift */; };
 		E79A3F18633C47474731C5AD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 482A57389960E56CA5959BF4 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -76,6 +80,8 @@
 		D0BFFBEC1AD4989200105986 /* APIProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
 		D0BFFBEE1AD4989F00105986 /* UbysseyAPIDataResolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbysseyAPIDataResolver.swift; sourceTree = "<group>"; };
 		D0BFFBF11AD4994500105986 /* Transporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transporter.swift; sourceTree = "<group>"; };
+		D0D1E3BB1B10911500890C59 /* ArticleTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTitle.swift; sourceTree = "<group>"; };
+		D0D1E3BD1B13000600890C59 /* ArticleHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleHeader.swift; sourceTree = "<group>"; };
 		D0D8CDDE1AD2CB2E00AC29B4 /* ubyssey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubyssey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D8CDE21AD2CB2E00AC29B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0D8CDE31AD2CB2E00AC29B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +95,8 @@
 		D0D8CDFC1AD2CB2F00AC29B4 /* ubysseyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ubysseyTests.swift; sourceTree = "<group>"; };
 		D0D8CE071AD2CB8900AC29B4 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		D0D8CE0A1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		D0E552731B1B9BD000E2D4C6 /* SectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		D0E552751B1B9FF900E2D4C6 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
 		D0F014A71AD747CA00F86D10 /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		D0F014AB1AD7489B00F86D10 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +155,8 @@
 				D082E3061AE5923C00DF13F0 /* ArticlePoll.swift */,
 				D082E3081AE5950200DF13F0 /* ArticleObject.swift */,
 				D082E3121AE5AA8500DF13F0 /* ArticleIterator.swift */,
+				D0D1E3BB1B10911500890C59 /* ArticleTitle.swift */,
+				D0D1E3BD1B13000600890C59 /* ArticleHeader.swift */,
 			);
 			name = ArticleParser;
 			sourceTree = "<group>";
@@ -298,6 +308,8 @@
 			children = (
 				D0D8CDE81AD2CB2F00AC29B4 /* ViewController.swift */,
 				D0F014AB1AD7489B00F86D10 /* ArticleDetailViewController.swift */,
+				D0E552731B1B9BD000E2D4C6 /* SectionViewController.swift */,
+				D0E552751B1B9FF900E2D4C6 /* TrendingViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -455,10 +467,12 @@
 			files = (
 				D0BFFBF21AD4994500105986 /* Transporter.swift in Sources */,
 				D082E3011AE591D500DF13F0 /* ArticleParser.swift in Sources */,
+				D0D1E3BC1B10911500890C59 /* ArticleTitle.swift in Sources */,
 				D0F014A81AD747CA00F86D10 /* Styles.swift in Sources */,
 				D0BFFBEF1AD4989F00105986 /* UbysseyAPIDataResolver.swift in Sources */,
 				D082E30D1AE597B500DF13F0 /* UIImage+ImageEffects.m in Sources */,
 				D0BFFBED1AD4989200105986 /* APIProtocol.swift in Sources */,
+				D0D1E3BE1B13000600890C59 /* ArticleHeader.swift in Sources */,
 				D0B9C7561AD49BD200A1FAB4 /* SwiftyJSON.swift in Sources */,
 				D0D8CE0B1AD2CC4A00AC29B4 /* ArticleTableViewCell.swift in Sources */,
 				D0D8CE081AD2CB8900AC29B4 /* Article.swift in Sources */,
@@ -467,6 +481,8 @@
 				D082E2FE1AE590E600DF13F0 /* ParallaxHeaderView.m in Sources */,
 				D082E3071AE5923C00DF13F0 /* ArticlePoll.swift in Sources */,
 				D0B9C7591AD49E1200A1FAB4 /* UbysseyImage.swift in Sources */,
+				D0E552741B1B9BD000E2D4C6 /* SectionViewController.swift in Sources */,
+				D0E552761B1B9FF900E2D4C6 /* TrendingViewController.swift in Sources */,
 				D04CECB11AF9906500C72F72 /* ScrollViewDrawable.swift in Sources */,
 				D082E3131AE5AA8500DF13F0 /* ArticleIterator.swift in Sources */,
 				D04CECB31AF992C800C72F72 /* ScrollViewDrawer.swift in Sources */,

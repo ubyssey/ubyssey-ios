@@ -24,7 +24,7 @@ class Styles {
     }
     
     class func titleFont() -> UIFont {
-        return UIFont(name: "HelveticaNeue-Bold", size: 18)!
+        return UIFont(name: "HelveticaNeue-Bold", size: 24)!
     }
     
     class func metaDataFont() -> UIFont {

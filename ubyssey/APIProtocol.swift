@@ -10,4 +10,5 @@ import Foundation
 
 protocol APIProtocol {
     func getFrontPage(callback: (JSON) -> Void)
+    func getSections(callback: (JSON) -> Void)
 }

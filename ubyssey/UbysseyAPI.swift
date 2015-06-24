@@ -21,4 +21,8 @@ class UbysseyAPI {
     func getArticle() {
     
     }
+    
+    func getSections(callback: (JSON) -> Void) {
+        resolver.getSections(callback)
+    }
 }

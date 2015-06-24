@@ -18,6 +18,9 @@ class ArticleParser {
     }
     
     func parseContent() -> ArticleParser {
+        //articleObjects.append(ArticleHeader())
+        articleObjects.append(ArticleTitle(data: JSON(["data": article.longHeadline])))
+        
         for (index: String, var data: JSON) in self.article.content {
             switch (data["type"].stringValue) {
             case "image":
