@@ -9,6 +9,12 @@
 import UIKit
 
 class TrendingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    override func viewDidLoad() {
+        var titleView = UIImageView(image: UIImage(named: "ubyssey_logo_small"))
+        titleView.contentMode = UIViewContentMode.ScaleAspectFit
+        self.navigationItem.titleView = titleView
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
