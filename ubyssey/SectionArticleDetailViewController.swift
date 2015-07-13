@@ -2,7 +2,7 @@
 //  SectionArticleDetailViewController.swift
 //  ubyssey
 //
-//  Created by Nathan on 2015-07-12.
+//  Created by Nathan Yee on 2015-07-12.
 //  Copyright (c) 2015 ca.ubyssey. All rights reserved.
 //
 

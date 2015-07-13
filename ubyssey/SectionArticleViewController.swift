@@ -14,6 +14,8 @@ class SectionArticleViewController: UIViewController, UITableViewDataSource, UIT
 
     var articlesList:[Article] = []
     var paginationAdapter: PaginationAdapter?
+    var selectedSection: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,10 +39,14 @@ class SectionArticleViewController: UIViewController, UITableViewDataSource, UIT
     func populateData() {
         fetchArticles({(articles: [Article]) in
             self.articlesList.removeAll()
-            for article in articles {
-                self.articlesList.append(article)
+            if self.selectedSection != nil {
+                for article in articles {
+                    if article.section == self.selectedSection {
+                        self.articlesList.append(article)
+                    }
+                }
+                self.articlesTableView.reloadData()
             }
-            self.articlesTableView.reloadData()
             self.refreshControl.endRefreshing()
         })
     }
