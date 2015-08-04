@@ -63,14 +63,11 @@ class TopicsViewController: UIViewController, UITableViewDataSource, UITableView
                     if let cell = topicsTableView.cellForRowAtIndexPath(indexPath) {
                         if let cellLabel = cell.textLabel {
                             if let cellLabelText = cellLabel.text {
-                                // NOTE: This loop may do the wrong thing if
-                                // more than one id in topics have the same
-                                // name (the smallest id will be chosen)
-                                for pair in topics {
-                                    if pair.1 == cellLabelText {
-                                        viewController.selectedTopicId = pair.0
-                                    }
-                                }
+                                // NOTE: this assumes that every row number
+                                // of topicsTableView corresponds to the order
+                                // of every topic in topics (in ascending
+                                // order)
+                                viewController.selectedTopicId = topics[indexPath.row].0
                             }
                         }
                     }
