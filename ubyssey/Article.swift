@@ -30,7 +30,7 @@ class Article {
         self.shortHeadline = articleData["short_headline"].stringValue
         self.image = UbysseyImage(imageData: articleData["featured_image"])
         self.content = articleData["content"]
-        self.section = articleData["section"].stringValue
+        self.section = articleData["section"]["name"].stringValue
         //self.publishedAt = parseTime(articleData["published_at"].stringValue)!
         self.importance = articleData["importance"].intValue
         self.slug = articleData["slug"].stringValue

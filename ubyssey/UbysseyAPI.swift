@@ -19,10 +19,18 @@ class UbysseyAPI {
     }
     
     func getArticle() {
-    
+
     }
     
     func getSections(callback: (JSON) -> Void) {
         resolver.getSections(callback)
+    }
+
+    func getTopics(callback: (JSON) -> Void) {
+        resolver.getTopics(callback)
+    }
+
+    func getTopicArticles(callback: (JSON) -> Void, topicId: Int) {
+        resolver.getTopicArticles(callback, topicId: topicId)
     }
 }
