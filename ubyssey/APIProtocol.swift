@@ -11,6 +11,7 @@ import Foundation
 protocol APIProtocol {
     func getFrontPage(callback: (JSON) -> Void)
     func getSections(callback: (JSON) -> Void)
+    func getSectionArticles(callback: (JSON) -> Void, sectionId: Int)
     func getTopics(callback: (JSON) -> Void)
     func getTopicArticles(callback: (JSON) -> Void, topicId: Int)
 }

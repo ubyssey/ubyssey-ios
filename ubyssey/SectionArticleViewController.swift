@@ -13,8 +13,8 @@ class SectionArticleViewController: UIViewController, UITableViewDataSource, UIT
     var refreshControl:UIRefreshControl!
 
     var articlesList:[Article] = []
-    var paginationAdapter: PaginationAdapter?
-    var selectedSection: String?
+    var paginationAdapter: SectionArticlesPaginationAdapter?
+    var selectedSectionId: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class SectionArticleViewController: UIViewController, UITableViewDataSource, UIT
         self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         self.articlesTableView!.addSubview(refreshControl)
 
-        paginationAdapter = PaginationAdapter(api: UbysseyAPI(dataResolver: UbysseyAPIDataResolver()))
+        paginationAdapter = SectionArticlesPaginationAdapter(api: UbysseyAPI(dataResolver: UbysseyAPIDataResolver()))
         // Do any additional setup after loading the view, typically from a nib.
         populateData()
     }
@@ -39,14 +39,10 @@ class SectionArticleViewController: UIViewController, UITableViewDataSource, UIT
     func populateData() {
         fetchArticles({(articles: [Article]) in
             self.articlesList.removeAll()
-            if self.selectedSection != nil {
-                for article in articles {
-                    if article.section == self.selectedSection {
-                        self.articlesList.append(article)
-                    }
-                }
-                self.articlesTableView.reloadData()
+            for article in articles {
+                self.articlesList.append(article)
             }
+            self.articlesTableView.reloadData()
             self.refreshControl.endRefreshing()
         })
     }
@@ -68,7 +64,9 @@ class SectionArticleViewController: UIViewController, UITableViewDataSource, UIT
     }
 
     func fetchArticles(callback: [Article] -> Void) {
-        paginationAdapter!.getNext(callback)
+        if selectedSectionId != nil {
+            paginationAdapter!.getNext(callback, sectionId: selectedSectionId!)
+        }
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

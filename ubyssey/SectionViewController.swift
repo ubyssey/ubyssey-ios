@@ -12,7 +12,12 @@ class SectionViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var sectionsTableView: UITableView!
 
-    var sections: [String] = []
+    // Int: id of section
+    // String: name of section
+    //
+    // Invarient: no id has the same name as another id
+    var sections: [(Int,String)] = []
+
     override func viewDidLoad() {
         var titleView = UIImageView(image: UIImage(named: "ubyssey_logo_small"))
         titleView.contentMode = UIViewContentMode.ScaleAspectFit
@@ -23,7 +28,7 @@ class SectionViewController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = UITableViewCell()
-        cell.textLabel?.text = sections[indexPath.row]
+        cell.textLabel?.text = sections[indexPath.row].1
         return cell
     }
     
@@ -34,7 +39,8 @@ class SectionViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Do not run tableView.deselectRowAtIndexPath(indexPath, animated: false) here
         // since prepareForSegue relies on the row still being selected to set the
-        // selectedSection of the destination SectionArticleViewController
+        // selectedSectionId of the destination SectionArticleViewController
+        
         self.performSegueWithIdentifier("SectionArticleViewControllerSegue", sender: self)
     }
 
@@ -42,7 +48,8 @@ class SectionViewController: UIViewController, UITableViewDataSource, UITableVie
         let api = UbysseyAPI(dataResolver: UbysseyAPIDataResolver())
         api.getSections { (data: JSON) -> Void in
             for (index: String, section: JSON) in data["results"] {
-                self.sections.append(section["name"].stringValue)
+                self.sections.append(section["id"].intValue,
+                    section["name"].stringValue)
             }
             self.sectionsTableView.reloadData()
         }
@@ -57,7 +64,11 @@ class SectionViewController: UIViewController, UITableViewDataSource, UITableVie
                     if let cell = sectionsTableView.cellForRowAtIndexPath(indexPath) {
                         if let cellLabel = cell.textLabel {
                             if let cellLabelText = cellLabel.text {
-                                viewController.selectedSection = cellLabelText
+                                // NOTE: this assumes that every row number
+                                // of sectionsTableView corresponds to the
+                                // order of every section in sections (in
+                                // ascending order)
+                                viewController.selectedSectionId = sections[indexPath.row].0
                             }
                         }
                     }

@@ -39,7 +39,7 @@ class TopicsViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // Do not run tableView.deselectRowAtIndexPath(indexPath, animated: false) here
         // since prepareForSegue relies on the row still being selected to set the
-        // selectedSection of the destination TopicsArticleViewController
+        // selectedTopicId of the destination TopicsArticleViewController
 
         self.performSegueWithIdentifier("TopicsArticleViewControllerSegue", sender: self)
     }
