@@ -23,6 +23,12 @@ class UbysseyAPIDataResolver: APIProtocol {
         transporter.resolve(callback)
     }
 
+    func getSectionArticles(callback: (JSON) -> Void, sectionId: Int) {
+        let route = baseRoute + "sections/\(sectionId)/frontpage/"
+        let transporter = Transporter(route: route, methodString: "GET", params: nil)
+        transporter.resolve(callback)
+    }
+
     func getTopics(callback: (JSON) -> Void) {
         let route = baseRoute + "topics/"
         let transporter = Transporter(route: route, methodString: "GET", params: nil)
