@@ -42,6 +42,14 @@ class TopicsArticleViewController: UIViewController, UITableViewDataSource, UITa
             for article in articles {
                 self.articlesList.append(article)
             }
+            if self.articlesList.count == 0 {
+                // Create dummy "No articles found" article
+                let jsonObject: JSON = ["long_headline": "No articles found"]
+                self.articlesList.append(Article(articleData: jsonObject))
+                self.articlesTableView.userInteractionEnabled = false
+            } else {
+                self.articlesTableView.userInteractionEnabled = true
+            }
             self.articlesTableView.reloadData()
             self.refreshControl.endRefreshing()
         })
