@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
         self.articlesTableView.addSubview(refreshControl)
+        self.articlesTableView.separatorStyle = UITableViewCellSeparatorStyle.None
 
         paginationAdapter = PaginationAdapter(api: UbysseyAPI(dataResolver: UbysseyAPIDataResolver()))
         // Do any additional setup after loading the view, typically from a nib.
