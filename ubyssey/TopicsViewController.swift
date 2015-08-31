@@ -11,6 +11,7 @@ import UIKit
 class TopicsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var topicsTableView: UITableView!
+    var refreshControl: UIRefreshControl!
 
     // Int: id of topic
     // String: name of topic
@@ -19,11 +20,18 @@ class TopicsViewController: UIViewController, UITableViewDataSource, UITableView
     var topics: [(Int, String)] = []
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         var titleView = UIImageView(image: UIImage(named: "ubyssey_logo_small"))
         titleView.contentMode = UIViewContentMode.ScaleAspectFit
         self.navigationItem.titleView = titleView
 
-        populateSections()
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.topicsTableView.addSubview(refreshControl)
+        self.topicsTableView.separatorStyle = UITableViewCellSeparatorStyle.None
+
+        populateTopics()
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -44,13 +52,19 @@ class TopicsViewController: UIViewController, UITableViewDataSource, UITableView
         self.performSegueWithIdentifier("TopicsArticleViewControllerSegue", sender: self)
     }
 
-    func populateSections() {
+    func refresh() {
+        populateTopics()
+    }
+
+    func populateTopics() {
+        self.topics.removeAll()
         let api = UbysseyAPI(dataResolver: UbysseyAPIDataResolver())
         api.getTopics { (data: JSON) -> Void in
             for (index: String, topic: JSON) in data["results"] {
                 self.topics.append(topic["id"].intValue, topic["name"].stringValue)
             }
             self.topicsTableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
 
