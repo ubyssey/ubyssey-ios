@@ -11,6 +11,7 @@ import UIKit
 class SectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var sectionsTableView: UITableView!
+    var refreshControl: UIRefreshControl!
 
     // Int: id of section
     // String: name of section
@@ -19,10 +20,17 @@ class SectionViewController: UIViewController, UITableViewDataSource, UITableVie
     var sections: [(Int,String)] = []
 
     override func viewDidLoad() {
+        super.viewDidLoad()
+
         var titleView = UIImageView(image: UIImage(named: "ubyssey_logo_small"))
         titleView.contentMode = UIViewContentMode.ScaleAspectFit
         self.navigationItem.titleView = titleView
-        
+
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.addTarget(self, action: "refresh", forControlEvents: UIControlEvents.ValueChanged)
+        self.sectionsTableView.addSubview(refreshControl)
+        self.sectionsTableView.separatorStyle = UITableViewCellSeparatorStyle.None
+
         populateSections()
     }
 
@@ -44,7 +52,12 @@ class SectionViewController: UIViewController, UITableViewDataSource, UITableVie
         self.performSegueWithIdentifier("SectionArticleViewControllerSegue", sender: self)
     }
 
+    func refresh() {
+        populateSections()
+    }
+
     func populateSections() {
+        self.sections.removeAll()
         let api = UbysseyAPI(dataResolver: UbysseyAPIDataResolver())
         api.getSections { (data: JSON) -> Void in
             for (index: String, section: JSON) in data["results"] {
@@ -52,6 +65,7 @@ class SectionViewController: UIViewController, UITableViewDataSource, UITableVie
                     section["name"].stringValue)
             }
             self.sectionsTableView.reloadData()
+            self.refreshControl.endRefreshing()
         }
     }
 
