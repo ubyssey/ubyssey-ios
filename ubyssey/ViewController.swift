@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var articlesTableView: UITableView!
-    var refreshControl:UIRefreshControl!
 
+    var refreshControl: UIRefreshControl!
     var articlesList:[Article] = []
     var paginationAdapter: PaginationAdapter?
     override func viewDidLoad() {
@@ -66,8 +66,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func fetchArticles(callback: [Article] -> Void) {
         paginationAdapter!.getNext(callback)
     }
+
+    override func viewDidAppear(animated: Bool) {
+        self.articlesTableView.allowsSelection = true
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.articlesTableView.allowsSelection = false
         if let identifier = segue.identifier {
             switch identifier {
             case "ArticleDetailSegue":
