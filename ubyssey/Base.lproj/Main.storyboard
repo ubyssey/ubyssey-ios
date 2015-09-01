@@ -244,10 +244,10 @@ of his duties</string>
             </objects>
             <point key="canvasLocation" x="1245" y="1634"/>
         </scene>
-        <!--SectionArticleViewController-->
+        <!--Section Article View Controller-->
         <scene sceneID="Za8-p6-gPH">
             <objects>
-                <viewController title="SectionArticleViewController" id="HB2-61-l6p" customClass="SectionArticleViewController" customModule="ubyssey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HB2-61-l6p" customClass="SectionArticleViewController" customModule="ubyssey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="usI-Yj-kG8"/>
                         <viewControllerLayoutGuide type="bottom" id="Hab-8e-JjC"/>
@@ -352,10 +352,10 @@ of his duties</string>
             </objects>
             <point key="canvasLocation" x="1990" y="1634"/>
         </scene>
-        <!--SectionArticleDetailViewController-->
+        <!--Section Article Detail View Controller-->
         <scene sceneID="sqs-cd-rQf">
             <objects>
-                <viewController title="SectionArticleDetailViewController" id="qXV-Lk-Xoq" customClass="SectionArticleDetailViewController" customModule="ubyssey" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qXV-Lk-Xoq" customClass="SectionArticleDetailViewController" customModule="ubyssey" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zzk-1x-Bv9"/>
                         <viewControllerLayoutGuide type="bottom" id="n4s-LL-yWe"/>
