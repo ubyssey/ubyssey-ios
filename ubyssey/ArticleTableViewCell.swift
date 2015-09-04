@@ -57,7 +57,7 @@ class ArticleTableViewCell: UITableViewCell {
             articlePublishedAt.text = ""
         }
 
-        articleTimeSince.text = String("\(article.estimatedReadingTime) minutes long")
+        articleTimeSince.text = String("\(article.estimatedReadingTime) minute read")
     }
 
 
@@ -87,16 +87,16 @@ class ArticleTableViewCell: UITableViewCell {
                 if hour > 12 {
                     // truncate leading hours
                     dateString.removeRange(advance(dateString.startIndex, 0)..<advance(dateString.startIndex, 2))
-                    return String(hour - 12) + dateString + " PM"
+                    return String(hour - 12) + dateString + " pm"
                 }
                 else if hour == 12 {
-                    return dateString + " PM"
+                    return dateString + " pm"
                 } else if hour >= 10 {
-                    return dateString + " AM"
+                    return dateString + " am"
                 } else {
                     // truncate leading 0
                     dateString.removeRange(advance(dateString.startIndex, 0)..<advance(dateString.startIndex, 1))
-                    return dateString + " AM"
+                    return dateString + " am"
                 }
             }
         }
