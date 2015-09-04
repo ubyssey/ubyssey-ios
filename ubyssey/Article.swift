@@ -17,6 +17,7 @@ class Article {
     let publishedAt: (NSDate?, NSDateFormatter?)
     let importance: Int
     let slug: String
+    let estimatedReadingTime: Int  // estimated time is calculated in minutes
     
     var imageUrl: String {
         get {
@@ -49,5 +50,6 @@ class Article {
         self.publishedAt = parseTime(articleData["published_at"].stringValue)
         self.importance = articleData["importance"].intValue
         self.slug = articleData["slug"].stringValue
+        self.estimatedReadingTime = articleData["est_reading_time"].intValue
     }
 }
