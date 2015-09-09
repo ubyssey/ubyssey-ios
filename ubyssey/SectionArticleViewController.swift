@@ -10,8 +10,8 @@ import UIKit
 
 class SectionArticleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var articlesTableView: UITableView!
-    var refreshControl:UIRefreshControl!
 
+    var refreshControl: UIRefreshControl!
     var articlesList:[Article] = []
     var paginationAdapter: SectionArticlesPaginationAdapter?
     var selectedSectionId: Int?
@@ -77,7 +77,12 @@ class SectionArticleViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
 
+    override func viewDidAppear(animated: Bool) {
+        self.articlesTableView.allowsSelection = true
+    }
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.articlesTableView.allowsSelection = false
         if let identifier = segue.identifier {
             switch identifier {
             case "SectionArticleDetailSegue":

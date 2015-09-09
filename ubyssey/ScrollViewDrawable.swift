@@ -10,6 +10,7 @@ import UIKit
 
 class ScrollViewDrawable {
     var scrollView: UIScrollView
+    var subViews: [UIView]
     var contentSize: CGSize {
         get {
             return scrollView.contentSize
@@ -20,9 +21,18 @@ class ScrollViewDrawable {
     }
     init(scrollView: UIScrollView) {
         self.scrollView = scrollView
+        self.subViews = []
     }
     
     func addSubview(view: UIView) {
+        subViews.append(view)
         scrollView.addSubview(view)
+    }
+
+    func clearScrollView() {
+        for view in subViews {
+            view.removeFromSuperview()
+        }
+        subViews = []
     }
 }

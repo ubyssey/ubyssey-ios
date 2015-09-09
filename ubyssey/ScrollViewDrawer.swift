@@ -33,4 +33,8 @@ class ScrollViewDrawer {
         let screenRect = UIScreen.mainScreen().bounds
         view.contentSize = CGSize(width: screenRect.size.width, height: currentY)
     }
+
+    func clearScrollView() {
+        view.clearScrollView()
+    }
 }

@@ -4,35 +4,50 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Alamofire.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
-		<key>Pods-SDWebImage.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
-		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Pods 2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Pods-Alamofire.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04973892633B6C02E02A221A</key>
+		<key>3F257C2DC8379E8630E376B9056D7655</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1446396D4483087E23565DCE</key>
+		<key>9666688CB41B38A9914616144C9C7A3E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>771124CE533F9BA0FFC6E7EB</key>
+		<key>F37D1F501D8E74B8B58852BD02AD0DCE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

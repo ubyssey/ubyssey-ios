@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+<<<<<<< HEAD
    LastUpgradeVersion = "0640"
+=======
+   LastUpgradeVersion = "0700"
+>>>>>>> origin/master
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +18,11 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+<<<<<<< HEAD
                BlueprintIdentifier = "771124CE533F9BA0FFC6E7EB"
+=======
+               BlueprintIdentifier = "AC05F8FA0BF4305082875047"
+>>>>>>> origin/master
                BuildableName = "Pods.framework"
                BlueprintName = "Pods"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -27,6 +35,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
+<<<<<<< HEAD
+=======
+      <AdditionalOptions>
+      </AdditionalOptions>
+>>>>>>> origin/master
       <Testables>
       </Testables>
    </TestAction>
@@ -38,6 +51,7 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+<<<<<<< HEAD
       allowLocationSimulation = "YES">
       <MacroExpansion>
          <BuildableReference
@@ -48,6 +62,10 @@
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+=======
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+>>>>>>> origin/master
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -57,6 +75,7 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+<<<<<<< HEAD
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -66,6 +85,8 @@
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+=======
+>>>>>>> origin/master
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
